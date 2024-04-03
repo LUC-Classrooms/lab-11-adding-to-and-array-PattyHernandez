@@ -6,10 +6,10 @@ Step 2 - add comments explaining each line of code in this sketch.
 */
 var dots = new Array(1);
 
-function setup() {
-  createCanvas(500, 300); 
-  dots[0] = new Dot(width/2, height/2);
-}
+function setup() {// runs once
+  createCanvas(500, 300); // creates canvas
+  dots[0] = new Dot(width/2, height/2);// first array element with dots
+}// end setup function
 
 function draw() {
   background(200);
@@ -26,7 +26,7 @@ function draw() {
 
 function mousePressed(){
   let obj = new Dot(mouseX, mouseY);
-  
+  dots.push(obj);
   /* add a line of code that adds "obj" to the "dots" array. Use the .push() method of the dots array object to append the new "obj" to the end of an existing array. Check the Array.push() documentation first to make sure you are using it correctly.
   */
 
